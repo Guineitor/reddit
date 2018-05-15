@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="dist/lilreddit.css"/>
-  </head>
-  <body>
-    <div id="app">Lil Reddit</div>
-    <script src="dist/lilreddit.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="dist/lilreddit.css"/>
+  <script src="dist/angular.js"></script>
+  <script src="dist/app.js"></script>
+  <script src="dist/controllers.js"></script>
+  <script src="dist/services.js"></script>
+</head>
+<body>
+  <div id="home">
+    <div ng-app="lilreddit" ng-controller="lilredditCtrl">
+        <div ng-repeat="r in rlist">
+            {{r.author}}
+        </div>
+      </div>
+    </div>
+
+
   </body>
-</html>
+  </html>
